@@ -38,6 +38,33 @@
             <a href="Contact.html">Contact_Us</a>
             <a href="Gallery.html">Gallery</a>
         </div>
-          <h1>Home</h1>
+        <center>
+            <h1>
+                Home
+            </h1>
+        <section>
+            <img class="mySlides" src="R (1).jpg" style="Height:500px;">
+            <img class="mySlides" src="OIP.webp" style="Height:500px;">
+           <img class="mySlides" src="R.jpg" style="Height:500px;">
+        </section>
+        </center>
+        <script>
+            var myIndex = 0;
+            carousel()
+
+            function carousel(){
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i= 0; i < x.length; i++){
+                    x[i].style.display = "none";
+                }
+
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}
+                x[myIndex-1].style.display = "block";
+                setTimeout(carousel, 3000);
+            }
+            </script>
+          
     </body>
 </html>
